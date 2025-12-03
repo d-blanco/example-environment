@@ -17,7 +17,7 @@ jobs:
 
       - name: Update Image Tag
         run: |
-          sed -i "s|image: .*|image: ${{ github.event.inputs.image }}:${{ github.event.inputs.tag_name }}|" applications/example-application/deployment.yaml
+          sed -i "s|image: .*|image: ${{ github.event.inputs.image }}:${{ github.event.inputs.tag_name }}|" applications/example-application/rollout.yaml
 
       - name: Commit and PR
         uses: peter-evans/create-pull-request@v5
