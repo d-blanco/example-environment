@@ -1,0 +1,29 @@
+name: Update Deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        required: true
+      image:
+        required: true
+
+jobs:
+  update-manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Update Image Tag
+        run: |
+          sed -i "s|image: .*|image: ${{ github.event.inputs.image }}:${{ github.event.inputs.tag_name }}|" applications/example-application/deployment.yaml
+
+      - name: Commit and PR
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          commit-message: "Update to ${{ github.event.inputs.tag_name }}"
+          branch: update-${{ github.event.inputs.tag_name }}
+          title: "Deploy version ${{ github.event.inputs.tag_name }}"
+          body: "This PR updates the image to ${{ github.event.inputs.tag_name }}"
