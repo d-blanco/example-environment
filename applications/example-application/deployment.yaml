@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: example-application
-        image: docker.io/danblanco/example-application:v4.0.0
+        image: docker.io/danblanco/example-application:v4.1.0
         env:
             api_key: "my-secret-key (pretend its from a secret and not hard-coded here!)"
         ports:
