@@ -16,7 +16,7 @@ spec:
       - name: example-application
         image: docker.io/danblanco/example-application:v4.1.1
         env:
-          - name: api_key
+          - name: API_KEY
             value: "my-secret-key (pretend its from a secret and not hard-coded here!)"
         ports:
         - containerPort: 8080
