@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
+  - image-updater.yaml
 
 images:
   - name: docker.io/danblanco/example-application
