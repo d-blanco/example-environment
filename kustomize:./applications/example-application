@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - docker.io/danblanco/example-application:v4.4.1
