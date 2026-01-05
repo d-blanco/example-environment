@@ -10,7 +10,7 @@ spec:
   writeBackConfig:
     method: "git"
     gitConfig:
-      repository: "git@github.com:myorg/myrepo.git"
+      repository: "git@github.com:d-blanco/example-environment.git"
       branch: "main"
       writeBackTarget: "kustomize:./applications/example-application"   # folder containing kustomization.yaml
   applicationRefs:
