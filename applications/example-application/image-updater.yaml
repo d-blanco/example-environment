@@ -12,7 +12,7 @@ spec:
     gitConfig:
       repository: "https://github.com/d-blanco/example-environment.git"
       branch: "main"
-      writeBackTarget: "./applications/example-application"  # folder containing kustomization.yaml
+      writeBackTarget: "kustomize:./applications/example-application"
   applicationRefs:
     - namePattern: "example-application"
       images:
