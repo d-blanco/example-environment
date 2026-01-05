@@ -4,7 +4,7 @@ metadata:
   name: example-application-updater
   namespace: argocd
 spec:
-  namespace: default
+  namespace: argocd
   commonUpdateSettings:
     updateStrategy: "semver"
   writeBackConfig:
