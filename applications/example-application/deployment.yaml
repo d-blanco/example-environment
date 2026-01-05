@@ -20,14 +20,3 @@ spec:
             value: "my-secret-key (pretend its from a secret and not hard-coded here!)"
         ports:
         - containerPort: 8080
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: example-application
-spec:
-  type: LoadBalancer
-  selector:
-    app: example-application
-  ports:
-  - port: 8080
