@@ -6,4 +6,4 @@ resources:
   - image-updater.yaml
 images:
   - name: docker.io/danblanco/example-application
-    newTag: v4.6.1
+    newTag: v4.7.1
